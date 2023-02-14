@@ -11,12 +11,6 @@ type UseMutationResult<T> = [(data: any) => void, UseMutationState<T>];
 export default function useMutation<T = any>(
   url: string
 ): UseMutationResult<T> {
-  //   const [state, setState] = useState({
-  //     loading: false,
-  //     data: undefined,
-  //     error: undefined,
-  //   });
-
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<undefined | any>(undefined);
   const [error, setError] = useState<undefined | any>(undefined);
